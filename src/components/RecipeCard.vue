@@ -46,7 +46,8 @@ const emit = defineEmits<{
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  max-width: 22rem;
+  width: 100%;
+  height: 100%;
   padding: 1.15rem 1.2rem 1.25rem;
   background: #24180f;
   border: 1px solid rgba(197, 160, 89, 0.45);
@@ -89,6 +90,7 @@ const emit = defineEmits<{
 
 .recipe-card-title {
   margin: 0;
+  min-height: 2.3em;
   font-family: "Cormorant Garamond", "Times New Roman", serif;
   font-size: clamp(1.35rem, 3vw, 1.7rem);
   font-weight: 700;

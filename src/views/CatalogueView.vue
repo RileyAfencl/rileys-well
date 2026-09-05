@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, ref } from "vue"
+import { computed, onMounted, ref } from "vue"
 import RecipeCard from "../components/RecipeCard.vue"
 import RecipeModal from "../components/RecipeModal.vue"
 import type { Recipe } from "../types/cocktail"
@@ -8,6 +8,22 @@ const recipeName = ref("")
 const spirit = ref("")
 const recipes = ref<Recipe[]>([])
 const selectedRecipe = ref<Recipe | null>(null)
+
+function normalize(value: string): string {
+  return value.trim().toLowerCase().replace(/[-_\s]+/g, " ")
+}
+
+const filteredRecipes = computed(() => {
+  const nameQuery = normalize(recipeName.value)
+  const spiritQuery = normalize(spirit.value)
+
+  return recipes.value.filter((recipe) => {
+    const matchesName = !nameQuery || normalize(recipe.name).includes(nameQuery)
+    const matchesSpirit = !spiritQuery || normalize(recipe.spirit).includes(spiritQuery)
+
+    return matchesName && matchesSpirit
+  })
+})
 
 onMounted(async () => {
   const response = await fetch("/recipes")
@@ -43,14 +59,15 @@ onMounted(async () => {
         Filter The Catalogue by recipe name and/or type of spirit!
       </p>
     </div>
-    <div class="catalogue-preview">
+    <div v-if="filteredRecipes.length" class="catalogue-preview">
       <RecipeCard
-        v-for="recipe in recipes"
+        v-for="recipe in filteredRecipes"
         :key="recipe.id"
         :recipe="recipe"
         @select="selectedRecipe = recipe"
       />
     </div>
+    <p v-else class="catalogue-empty">No recipes match those filters.</p>
     <RecipeModal
       v-if="selectedRecipe"
       :recipe="selectedRecipe"
@@ -127,10 +144,18 @@ onMounted(async () => {
 }
 
 .catalogue-preview {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(16.5rem, 1fr));
+  align-items: stretch;
   gap: 1rem;
   margin-top: 1.75rem;
+}
+
+.catalogue-empty {
+  margin: 1.75rem 0 0;
+  color: var(--color-silver);
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-size: 1.2rem;
 }
 
 .field-input:hover {

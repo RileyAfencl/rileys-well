@@ -22,8 +22,8 @@ withDefaults(
   width: 100%;
   padding: 0.85rem 1rem;
   font-family: "Cormorant Garamond", "Times New Roman", serif;
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 1.25rem;
+  font-weight: 700;
   letter-spacing: 0.04em;
   text-align: center;
   color: var(--color-gold);
