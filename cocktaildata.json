@@ -1,0 +1,529 @@
+[
+  {
+    "id": "tom-collins",
+    "name": "Tom Collins",
+    "spirit": "gin",
+    "tags": ["balanced", "bubbles", "citrus", "refreshing", "tall"],
+    "glass": "collins",
+    "garnish": ["Lemon wedge"],
+    "ingredients": [
+      {
+        "id": "gin",
+        "name": "Gin",
+        "amount": 1.5,
+        "unit": "oz"
+      },
+      {
+        "id": "lemon-juice",
+        "name": "Fresh lemon juice",
+        "amount": 0.5,
+        "unit": "oz"
+      },
+      {
+        "id": "simple-syrup",
+        "name": "Simple syrup",
+        "amount": 0.5,
+        "unit": "oz"
+      },
+      {
+        "id": "soda-water",
+        "name": "Soda water",
+        "amount": 1.0,
+        "unit": "topper"
+      }
+    ],
+    "instructions": [
+      "Add gin, lemon juice, and simple syrup to a shaker with ice.",
+      "Shake forcefully and pour into a collins glass, or strain into a collins glass over fresh ice. Ensure the glass is full of ice.",
+      "Top with soda water.",
+      "Garnish with a lemon wedge."
+    ]
+  },
+  {
+    "id": "lemon-drop",
+    "name": "Lemon Drop",
+    "spirit": "vodka",
+    "tags": ["citrus", "short", "sour", "sweet"],
+    "glass": "martini",
+    "garnish": ["Sugar rim", "Lemon wedge"],
+    "ingredients": [
+      {
+        "id": "vodka",
+        "name": "Vodka",
+        "amount": 1.5,
+        "unit": "oz"
+      },
+      {
+        "id": "triple-sec",
+        "name": "Triple sec",
+        "amount": 0.5,
+        "unit": "oz"
+      },
+      {
+        "id": "lemon-juice",
+        "name": "Fresh lemon juice",
+        "amount": 1.0,
+        "unit": "oz"
+      },
+      {
+        "id": "simple-syrup",
+        "name": "Simple syrup",
+        "amount": 1.0,
+        "unit": "oz"
+      }
+    ],
+    "instructions": [
+      "Add vodka, triple sec, lemon juice, and simple syrup to a shaker with ice.",
+      "Shake forcefully and strain into a martini glass.",
+      "Rim the glass with sugar if desired.",
+      "Garnish with a lemon wedge."
+    ]
+  },
+  {
+    "id": "huckleberry-lemon-drop",
+    "name": "Huckleberry Lemon Drop",
+    "spirit": "vodka",
+    "tags": ["balanced", "citrus", "huckleberry", "muddled", "short", "sweet"],
+    "glass": "martini",
+    "garnish": ["Sugar rim", "Orange wedge"],
+    "ingredients": [
+      {
+        "id": "44-north",
+        "name": "44 North Huckleberry Vodka",
+        "amount": 1.25,
+        "unit": "oz"
+      },
+      {
+        "id": "triple-sec",
+        "name": "Triple sec",
+        "amount": 0.75,
+        "unit": "oz"
+      },
+      {
+        "id": "lemon-wedge",
+        "name": "Lemon wedge",
+        "amount": 4.0,
+        "unit": "piece"
+      },
+      {
+        "id": "simple-syrup",
+        "name": "Simple syrup",
+        "amount": 0.5,
+        "unit": "oz"
+      },
+      {
+        "id": "huckleberry-puree",
+        "name": "Huckleberry puree",
+        "amount": 0.25,
+        "unit": "oz"
+      },
+      {
+        "id": "orange-wedge",
+        "name": "Orange wedge",
+        "amount": 2.0,
+        "unit": "piece"
+      },
+      {
+        "id": "water",
+        "name": "Water",
+        "amount": 1.0,
+        "unit": "dash"
+      }
+    ],
+    "instructions": [
+      "Add lemon wedges and orange wedges to a shaker and muddle to release the flavors.",
+      "Add 44 North Huckleberry Vodka, triple sec, simple syrup, huckleberry puree, and a dash of water to the shaker with ice.",
+      "Shake forcefully and strain into a martini glass.",
+      "Rim the glass with sugar if desired.",
+      "Garnish with an orange wedge."
+    ]
+  },
+  {
+    "id": "classic-margarita",
+    "name": "Classic Margarita",
+    "spirit": "tequila",
+    "tags": ["citrus", "short", "sour"],
+    "glass": "rocks",
+    "garnish": ["Salt rim", "Lime wedge"],
+    "ingredients": [
+      {
+        "id": "tequila",
+        "name": "Tequila",
+        "amount": 1.5,
+        "unit": "oz"
+      },
+      {
+        "id": "triple-sec",
+        "name": "Triple sec",
+        "amount": 0.5,
+        "unit": "oz"
+      },
+      {
+        "id": "simple-syrup",
+        "name": "Simple syrup",
+        "amount": 1.0,
+        "unit": "oz"
+      },
+      {
+        "id": "lime-juice",
+        "name": "Fresh lime juice",
+        "amount": 1.0,
+        "unit": "oz"
+      }
+    ],
+    "instructions": [
+      "Add tequila, triple sec, simple syrup, and lime juice to a shaker with ice.",
+      "Shake forcefully and pour into a rocks glass, or strain into a rocks glass over fresh ice.",
+      "Rim the glass with salt if desired.",
+      "Garnish with a lime wedge."
+    ]
+  },
+  {
+    "id": "spicy-margarita",
+    "name": "Spicy Margarita",
+    "spirit": "tequila",
+    "tags": ["balanced", "citrus", "muddled", "short", "spicy"],
+    "glass": "rocks",
+    "garnish": ["Tajin rim", "Lime wedge"],
+    "ingredients": [
+      {
+        "id": "tequila",
+        "name": "Tequila",
+        "amount": 1.5,
+        "unit": "oz"
+      },
+      {
+        "id": "triple-sec",
+        "name": "Triple sec",
+        "amount": 0.5,
+        "unit": "oz"
+      },
+      {
+        "id": "simple-syrup",
+        "name": "Simple syrup",
+        "amount": 0.75,
+        "unit": "oz"
+      },
+      {
+        "id": "lime-juice",
+        "name": "Fresh lime juice",
+        "amount": 0.75,
+        "unit": "oz"
+      },
+      {
+        "id": "jalapeno",
+        "name": "Jalapeno slice",
+        "amount": 2.0,
+        "unit": "piece"
+      },
+      {
+        "id": "pineapple-juice",
+        "name": "Fresh pineapple juice",
+        "amount": 0.25,
+        "unit": "oz"
+      },
+      {
+        "id": "water",
+        "name": "Water",
+        "amount": 1.0,
+        "unit": "dash"
+      }
+    ],
+    "instructions": [
+      "Add jalapeno slices to a shaker and muddle to release the flavors.",
+      "Add tequila, triple sec, simple syrup, lime juice, pineapple juice, and a dash of water to the shaker with ice.",
+      "Shake forcefully and strain into a rocks glass over fresh ice.",
+      "Rim the glass with Tajin if desired.",
+      "Garnish with a lime wedge."
+    ]
+  },
+  {
+    "id": "espresso-martini",
+    "name": "Espresso Martini",
+    "spirit": "vodka",
+    "tags": ["balanced", "coffee", "dairy", "short"],
+    "glass": "martini",
+    "garnish": ["Coffee beans"],
+    "ingredients": [
+      {
+        "id": "vodka",
+        "name": "Vodka",
+        "amount": 1.5,
+        "unit": "oz"
+      },
+      {
+        "id": "kahlua",
+        "name": "Kahlua",
+        "amount": 0.5,
+        "unit": "oz"
+      },
+      {
+        "id": "simple-syrup",
+        "name": "Simple syrup",
+        "amount": 0.25,
+        "unit": "oz"
+      },
+      {
+        "id": "espresso",
+        "name": "Fresh espresso",
+        "amount": 0.5,
+        "unit": "oz"
+      },
+      {
+        "id": "half-and-half",
+        "name": "Half and half",
+        "amount": 0.5,
+        "unit": "oz"
+      },
+      {
+        "id": "water",
+        "name": "Water",
+        "amount": 1.0,
+        "unit": "dash"
+      }
+    ],
+    "instructions": [
+      "Add vodka, Kahlua, simple syrup, espresso, half and half, and a dash of water to a shaker with ice.",
+      "Shake forcefully and strain into a martini glass.",
+      "Garnish with 3 coffee beans."
+    ]
+  },
+  {
+    "id": "huckleberry-spritzer",
+    "name": "Huckleberry Spritzer",
+    "spirit": "vodka",
+    "tags": ["balanced", "bubbles", "citrus", "huckleberry", "muddled", "refreshing", "tall"],
+    "glass": "collins",
+    "garnish": ["Orange wedge"],
+    "ingredients": [
+      {
+        "id": "44-north",
+        "name": "44 North Huckleberry Vodka",
+        "amount": 1.5,
+        "unit": "oz"
+      },
+      {
+        "id": "triple-sec",
+        "name": "Triple sec",
+        "amount": 0.5,
+        "unit": "oz"
+      },
+      {
+        "id": "simple-syrup",
+        "name": "Simple syrup",
+        "amount": 1.0,
+        "unit": "dash"
+      },
+      {
+        "id": "lime-wedge",
+        "name": "Lime wedge",
+        "amount": 1.0,
+        "unit": "piece"
+      },
+      {
+        "id": "lemon-wedge",
+        "name": "Lemon wedge",
+        "amount": 1.0,
+        "unit": "piece"
+      },
+      {
+        "id": "orange-wedge",
+        "name": "Orange wedge",
+        "amount": 2.0,
+        "unit": "piece"
+      },
+      {
+        "id": "huckleberry-puree",
+        "name": "Huckleberry puree",
+        "amount": 0.25,
+        "unit": "oz"
+      },
+      {
+        "id": "water",
+        "name": "Water",
+        "amount": 1.0,
+        "unit": "dash"
+      },
+      {
+        "id": "soda-water",
+        "name": "Soda water",
+        "amount": 0.5,
+        "unit": "topper"
+      },
+      {
+        "id": "sprite",
+        "name": "Sprite",
+        "amount": 0.5,
+        "unit": "topper"
+      }
+    ],
+    "instructions": [
+      "Add lime wedges, lemon wedges, and orange wedges to a shaker and muddle to release the flavors.",
+      "Add 44 North Huckleberry Vodka, triple sec, simple syrup, huckleberry puree, and a dash of water to the shaker with ice.",
+      "Shake forcefully and strain into a collins glass over fresh ice.",
+      "Top with half Sprite and half soda water.",
+      "Garnish with an orange wedge."
+    ]
+  },
+  {
+    "id": "old-fashioned",
+    "name": "Old Fashioned",
+    "spirit": "bourbon",
+    "tags": ["short", "spirit-forward", "sweet"],
+    "glass": "rocks",
+    "garnish": ["Orange peel", "Cherry"],
+    "ingredients": [
+      {
+        "id": "bourbon",
+        "name": "Bourbon",
+        "amount": 2.0,
+        "unit": "oz"
+      },
+      {
+        "id": "simple-syrup",
+        "name": "Simple syrup",
+        "amount": 0.5,
+        "unit": "oz"
+      },
+      {
+        "id": "angostura-bitters",
+        "name": "Angostura bitters",
+        "amount": 2.0,
+        "unit": "dash"
+      }
+    ],
+    "instructions": [
+      "Add bourbon, simple syrup, and angostura bitters to a rocks glass over a large ice cube.",
+      "Stir 8-10 times to chill and mix the ingredients.",
+      "Squeeze the orange peel, lengthwise, skin facing away from you, over the glass to release the oils.",
+      "Run the orange peel around the inside edge of the glass, skin side away from you, and drop it into the glass.",
+      "Garnish with a cherry if desired."
+    ]
+  },
+  {
+    "id": "manhattan",
+    "name": "Manhattan",
+    "spirit": "rye-whiskey",
+    "tags": ["short", "spirit-forward", "sweet"],
+    "glass": "coupe",
+    "garnish": ["Cherry"],
+    "ingredients": [
+      {
+        "id": "rye-whiskey",
+        "name": "Rye whiskey",
+        "amount": 2.0,
+        "unit": "oz"
+      },
+      {
+        "id": "sweet-vermouth",
+        "name": "Sweet vermouth",
+        "amount": 1.0,
+        "unit": "oz"
+      },
+      {
+        "id": "angostura-bitters",
+        "name": "Angostura bitters",
+        "amount": 2.0,
+        "unit": "dash"
+      }
+    ],
+    "instructions": [
+      "Add rye whiskey, sweet vermouth, and angostura bitters to a mixing glass with ice.",
+      "Stir 8-10 times to chill and mix the ingredients.",
+      "Strain into a coupe glass.",
+      "Garnish with a cherry."
+    ]
+  },
+  {
+    "id": "garden-gimlet",
+    "name": "Garden Gimlet",
+    "spirit": "gin",
+    "tags": ["citrus", "muddled", "refreshing", "short", "spirit-forward"],
+    "glass": "coupe",
+    "garnish": ["Cucumber slice"],
+    "ingredients": [
+      {
+        "id": "gin",
+        "name": "Gin",
+        "amount": 2.0,
+        "unit": "oz"
+      },
+      {
+        "id": "lime-juice",
+        "name": "Fresh lime juice",
+        "amount": 1.0,
+        "unit": "oz"
+      },
+      {
+        "id": "simple-syrup",
+        "name": "Simple syrup",
+        "amount": 1.0,
+        "unit": "oz"
+      },
+      {
+        "id": "cucumber-slice",
+        "name": "Cucumber slice",
+        "amount": 2.0,
+        "unit": "piece"
+      },
+      {
+        "id": "water",
+        "name": "Water",
+        "amount": 1.0,
+        "unit": "dash"
+      }
+    ],
+    "instructions": [
+      "Add cucumber slices to a shaker and muddle to release the flavors.",
+      "Add gin, lime juice, simple syrup, and a dash of water to the shaker with ice.",
+      "Shake forcefully and strain into a coupe glass.",
+      "Garnish with a cucumber slice."
+    ]
+  },
+  {
+    "id": "moscow-mule",
+    "name": "Moscow Mule",
+    "spirit": "vodka",
+    "tags": ["bubbles", "citrus", "refreshing", "short"],
+    "glass": "rocks",
+    "garnish": ["Lime wedge"],
+    "ingredients": [
+      {
+        "id": "vodka",
+        "name": "Vodka",
+        "amount": 1.5,
+        "unit": "oz"
+      },
+      {
+        "id": "lime-juice",
+        "name": "Fresh lime juice",
+        "amount": 1.0,
+        "unit": "oz"
+      },
+      {
+        "id": "simple-syrup",
+        "name": "Simple syrup",
+        "amount": 1.0,
+        "unit": "oz"
+      },
+      {
+        "id": "ginger-beer",
+        "name": "Ginger beer",
+        "amount": 1.0,
+        "unit": "topper"
+      },
+      {
+        "id": "angostura-bitters",
+        "name": "Angostura bitters",
+        "amount": 1.0,
+        "unit": "dash"
+      }
+    ],
+    "instructions": [
+      "Add vodka, lime juice, and simple syrup to a shaker with ice.",
+      "Shake forcefully and pour into a rocks glass, or strain into a rocks glass over fresh ice.",
+      "Top with ginger beer.",
+      "Garnish with a lime wedge and a dash of angostura bitters."
+    ]
+  }
+]
