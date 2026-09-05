@@ -1,8 +1,14 @@
 <script setup lang="ts">
 import { ref } from "vue"
+import RecipeCard from "../components/RecipeCard.vue"
+import RecipeModal from "../components/RecipeModal.vue"
+import cocktailData from "../../cocktaildata.json"
+import type { Recipe } from "../types/cocktail"
 
 const recipeName = ref("")
 const spirit = ref("")
+const mockRecipe = (cocktailData as Recipe[])[0]
+const selectedRecipe = ref<Recipe | null>(null)
 </script>
 
 <template>
@@ -33,6 +39,18 @@ const spirit = ref("")
         Filter The Catalogue by recipe name and/or type of spirit!
       </p>
     </div>
+    <div class="catalogue-preview">
+      <RecipeCard
+        v-if="mockRecipe"
+        :recipe="mockRecipe"
+        @select="selectedRecipe = mockRecipe"
+      />
+    </div>
+    <RecipeModal
+      v-if="selectedRecipe"
+      :recipe="selectedRecipe"
+      @close="selectedRecipe = null"
+    />
   </section>
 </template>
 
@@ -101,6 +119,10 @@ const spirit = ref("")
   font-size: 0.9rem;
   font-weight: 500;
   line-height: 1.3;
+}
+
+.catalogue-preview {
+  margin-top: 1.75rem;
 }
 
 .field-input:hover {
