@@ -33,7 +33,11 @@ onMounted(async () => {
 
 <template>
   <section class="catalogue-view" aria-label="Recipe catalogue">
-    <h2 class="catalogue-title">The Catalogue</h2>
+    <h2 class="catalogue-title">
+      <span class="catalogue-dot" aria-hidden="true"></span>
+      The Catalogue
+      <span class="catalogue-dot" aria-hidden="true"></span>
+    </h2>
     <div class="catalogue-filters">
       <label class="field">
         <span class="field-label">Recipe Name</span>
@@ -82,6 +86,10 @@ onMounted(async () => {
 }
 
 .catalogue-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
   margin: 0 0 1.75rem;
   font-family: "Great Vibes", "Segoe Script", cursive;
   font-size: clamp(2.5rem, 7vw, 3.75rem);
@@ -90,6 +98,14 @@ onMounted(async () => {
   line-height: 1.2;
   text-align: center;
   color: var(--color-silver);
+}
+
+.catalogue-dot {
+  width: 0.45rem;
+  height: 0.45rem;
+  flex-shrink: 0;
+  background: var(--color-gold);
+  border-radius: 50%;
 }
 
 .catalogue-filters {

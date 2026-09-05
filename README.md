@@ -1,42 +1,65 @@
-# .
+# Riley's Well
 
-This template should help get you started developing with Vue 3 in Vite.
+## Overview
+A full stack catalogue app containing custom cocktail recipes that are viewable through clickable recipe cards/modals. 
 
-## Recommended IDE Setup
+## Features
+- Cocktail data persisted in PostgreSQL
+- Rails API for retrieving cocktail data
+- Searchable recipe catalogue
+- Reusable recipe cards
+- Recipe detail modal
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## How It Works
+Upon page load, the recipe data is pulled from the PostgreSQL database via a Rails backend/REST API and then that data is filtered client side. 
 
-## Recommended Browser Setup
+## Things to Improve With More Time
+- Add a "What Do I Want?" recommendation view based on cocktail preferences and tags
+- Add a "What Can I Make?" view that matches recipes against ingredients a user has available
+- Add an interactive glossary for users unfamiliar with cocktail terminology
+- Expand the recipe catalogue and add additional visual polish/iconography
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+## Tech Stack
+- Vue 3
+- TypeScript
+- Ruby on Rails
+- PostgreSQL
 
-## Type Support for `.vue` Imports in TS
+## How to Run
+You need Node.js, Ruby on Rails, and PostgreSQL. Run the following in bash. The API and the Vue app must both be running.
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+### 1. Install dependencies
+From the project root:
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
+```bash
 npm install
+cd backend
+bundle install
 ```
 
-### Compile and Hot-Reload for Development
+### 2. Set up the database
+Still in `backend/`:
 
-```sh
+```bash
+bin/rails db:create
+bin/rails db:migrate
+bin/rails db:seed
+```
+
+### 3. Start the Rails API
+From `backend/`:
+
+```bash
+bin/rails server
+```
+
+The API is at `http://localhost:3000`. Recipes are at `http://localhost:3000/recipes`.
+
+### 4. Start the Vue app
+In a second terminal, from the project root:
+
+```bash
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
+Open the Vite URL (usually `http://localhost:5173`). Vue proxies `/recipes` to the Rails server, so leave both processes running.
