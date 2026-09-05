@@ -1,14 +1,18 @@
 <script setup lang="ts">
-import { ref } from "vue"
+import { onMounted, ref } from "vue"
 import RecipeCard from "../components/RecipeCard.vue"
 import RecipeModal from "../components/RecipeModal.vue"
-import cocktailData from "../../cocktaildata.json"
 import type { Recipe } from "../types/cocktail"
 
 const recipeName = ref("")
 const spirit = ref("")
-const mockRecipe = (cocktailData as Recipe[])[0]
+const recipes = ref<Recipe[]>([])
 const selectedRecipe = ref<Recipe | null>(null)
+
+onMounted(async () => {
+  const response = await fetch("/recipes")
+  recipes.value = (await response.json()) as Recipe[]
+})
 </script>
 
 <template>
@@ -41,9 +45,10 @@ const selectedRecipe = ref<Recipe | null>(null)
     </div>
     <div class="catalogue-preview">
       <RecipeCard
-        v-if="mockRecipe"
-        :recipe="mockRecipe"
-        @select="selectedRecipe = mockRecipe"
+        v-for="recipe in recipes"
+        :key="recipe.id"
+        :recipe="recipe"
+        @select="selectedRecipe = recipe"
       />
     </div>
     <RecipeModal
@@ -122,6 +127,9 @@ const selectedRecipe = ref<Recipe | null>(null)
 }
 
 .catalogue-preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
   margin-top: 1.75rem;
 }
 
